@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&amp;display=swap"
+      rel="stylesheet"
+    />
+    <title>Startpage</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="bg"></div>
+      <div class="maincard">
+        <div class="content">
+          <div class="image">
+            <img id="img" src="images/gif.gif" alt="Steam Spring Sale 2024: 'Meow Mail'" />
+<!--             <img id="img" src="" alt="Steam Spring Sale 2024: 'Meow Mail'" /> -->
+          </div>
+          <div id="links" class="links">
+            <section>
+              <h3>Daily</h3>
+              <ul>
+                <li><a href="https://www.youtube.com/">Youtube</a></li>
+                <li style="list-style: none;">&ensp;</li>
+
+                <li><a href="https://allegro.pl/">Allegro</a></li>
+                <li><a href="https://www.x-kom.pl/">X-KOM</a></li>
+                <li><a href="https://gg.deals/news/">GG Deals</a></li>
+                <li><a href="https://www.empik.com/">Empik</a></li>
+
+<!--                 <li style="list-style: none;">&ensp;</li> -->
+              </ul>
+            </section>
+            <section>
+              <h3>University</h3>
+              <ul>
+                <li><a href="https://platforma.polsl.pl/rau2/my/courses.php?lang=pl">RAu2 PZE</a></li>
+              </ul>
+            </section>
+            <section>
+              <h3>Social</h3>
+              <ul>
+                <li><a href="https://www.messenger.com/">Messenger</a></li>
+<!--                 <li><a href=""></a></li> -->
+<!--                 <li><a href=""></a></li> -->
+<!--                 <li><a href=""></a></li> -->
+<!--                 <li><a href=""></a></li> -->
+<!--                 <li><a href=""></a></li> -->
+
+              </ul>
+            </section>
+            <section>
+              <h3>Creative liberty</h3>
+              <ul>
+                <li><a href="https://github.com/revalew">Github</a></li>
+                <li style="list-style: none;">&ensp;</li>
+                <li><a href="https://www.deepl.com/translator">DeepL</a></li>
+                <li><a href="https://www.deepl.com/write">DeepL Write</a></li>
+<!--                 <li><a href=""></a></li> -->
+<!--                 <li><a href=""></a></li> -->
+<!--                 <li><a href=""></a></li> -->
+<!--                 <li><a href=""></a></li> -->
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="search">
+          <form action="https://www.google.com/search">
+            <label for="q" autofocus>> find / </label>
+            <input
+              type="text"
+              placeholder="Type Here"
+              name="q"
+              autocomplete="off"
+              autofocus
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+   
+    function changeCSS(cssFile, cssLinkIndex) {
+      console.log("Onclick working");
+     var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+     var newlink = document.createElement("link");
+        newlink.setAttribute("rel", "stylesheet");
+        newlink.setAttribute("type", "text/css");
+        newlink.setAttribute("href", `../${cssFile}/style.css`);
+        changeImgSrc(cssFile);
+        document.getElementsByTagName("head").item(cssLinkIndex).replaceChild(newlink, oldlink);
+}
+    function changeImgSrc(cssFile){
+        var img_bar=document.getElementById("img");
+        img_bar.src=`../${cssFile}/images/gif.gif`;
+    }
+</script>
+</html>

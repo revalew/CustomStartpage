@@ -1,0 +1,19 @@
+"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp"
+
+In Windows 10:
+
+1) Create a regular, plain text file named myscript.txt, for example.
+
+2) As its contents, insert this: sh scriptname.sh. Save and close.
+
+3) Rename this file to myscript.bat then, with your Windows Explorer, locate the file at the filesystem folder, right click on it and select "copy".
+
+4) Yet on Windows Explorer, go to <ROOT>\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp and right click on it. Then select "paste shortcut" (you will need Administration rights to do it).
+
+It's done. Every time your windows starts it runs your bash.
+
+More info: https://support.microsoft.com/en-us/help/4026268/windows-10-change-startup-apps
+
+---
+
+Make sure to add C:\Program Files\Git\bin in PATH environment variable for sh command to work in Command Prompt
